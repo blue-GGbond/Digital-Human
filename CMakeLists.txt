@@ -33,6 +33,17 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 ############################### 第三方依赖
 
 # 项目的第三方依赖
+# 查找opencv库
+find_package(OpenCV REQUIRED)
+
+# 打印以下信息, 方便调试
+message(STATUS "OpenCV library status:")
+message(STATUS "OpenCV version: ${OpenCV_VERSION}")
+# message(STATUS "OpenCV library path: ${OpenCV_LIBS}") 列表很长，可以注释掉
+message(STATUS "OpenCV include path: ${OpenCV_INCLUDE_DIRS}")
+
+# 将 OpenCV 的头文件路径添加到全局包含路径中
+include_directories(${OpenCV_INCLUDE_DIRS})
 
 ############################### 子目录
 add_subdirectory(src)

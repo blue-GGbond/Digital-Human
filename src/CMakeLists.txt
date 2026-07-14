@@ -18,3 +18,9 @@ target_include_directories(digital_human_core PUBLIC
 )
 
 # 配置一些第三方库等
+# 链接opencv库
+target_link_libraries(digital_human_core PUBLIC
+    ${OpenCV_LIBS}
+)
+
+message("OpenCV libraries: ${OpenCV_LIBS}")
