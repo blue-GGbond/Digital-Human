@@ -16,3 +16,12 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/opencv_test.cpp")
 endif()
 
 message(STATUS "Configured example targets.")
+
+# 3. 构建 ncnn 推理测试
+if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/ncnn_test.cpp")
+    add_executable(ncnn_test ncnn_test.cpp)
+
+    # 链接 SDK 核心库
+    target_link_libraries(ncnn_test PRIVATE digital_human_core)
+
+endif()

@@ -42,6 +42,11 @@ message(STATUS "OpenCV version: ${OpenCV_VERSION}")
 # message(STATUS "OpenCV library path: ${OpenCV_LIBS}") 列表很长，可以注释掉
 message(STATUS "OpenCV include path: ${OpenCV_INCLUDE_DIRS}")
 
+# ncnn
+find_package(ncnn REQUIRED)
+message(STATUS ">> ncnn Found")
+
+
 # 将 OpenCV 的头文件路径添加到全局包含路径中
 include_directories(${OpenCV_INCLUDE_DIRS})
 

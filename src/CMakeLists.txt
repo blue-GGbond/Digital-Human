@@ -21,6 +21,7 @@ target_include_directories(digital_human_core PUBLIC
 # 链接opencv库
 target_link_libraries(digital_human_core PUBLIC
     ${OpenCV_LIBS}
+    ncnn
 )
 
 message("OpenCV libraries: ${OpenCV_LIBS}")
