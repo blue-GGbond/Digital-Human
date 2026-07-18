@@ -46,6 +46,21 @@ message(STATUS "OpenCV include path: ${OpenCV_INCLUDE_DIRS}")
 find_package(ncnn REQUIRED)
 message(STATUS ">> ncnn Found")
 
+# 添加 FFmpeg
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(FFMPEG REQUIRED
+    libavformat
+    libavcodec
+    libavutil
+    libswresample
+    libswscale
+)
+
+message(STATUS ">> FFMPEG Found: ${FFMPEG_VERSION}")
+message(STATUS ">> FFmpeg Include: ${FFMPEG_INCLUDE_DIRS}")
+
+# 将FFmpeg的头文件路径添加到全局包含路径中
+include_directories(${FFMPEG_INCLUDE_DIRS})
 
 # 将 OpenCV 的头文件路径添加到全局包含路径中
 include_directories(${OpenCV_INCLUDE_DIRS})

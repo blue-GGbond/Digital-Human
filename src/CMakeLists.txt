@@ -22,6 +22,7 @@ target_include_directories(digital_human_core PUBLIC
 target_link_libraries(digital_human_core PUBLIC
     ${OpenCV_LIBS}
     ncnn
+    ${FFMPEG_LIBRARIES}
 )
 
 message("OpenCV libraries: ${OpenCV_LIBS}")

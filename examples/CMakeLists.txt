@@ -25,3 +25,11 @@ if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/ncnn_test.cpp")
     target_link_libraries(ncnn_test PRIVATE digital_human_core)
 
 endif()
+
+# 4. 构建 FFmpeg 测试程序 (验证音频功能)
+if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/ffmpeg_audio_test.cpp")
+    add_executable(ffmpeg_audio_test ffmpeg_audio_test.cpp)
+
+    # 链接 SDK 核心库
+    target_link_libraries(ffmpeg_audio_test PRIVATE digital_human_core)
+endif()
