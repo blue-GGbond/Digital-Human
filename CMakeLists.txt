@@ -59,6 +59,12 @@ pkg_check_modules(FFMPEG REQUIRED
 message(STATUS ">> FFMPEG Found: ${FFMPEG_VERSION}")
 message(STATUS ">> FFmpeg Include: ${FFMPEG_INCLUDE_DIRS}")
 
+# dlib
+find_package(dlib REQUIRED)
+message(STATUS ">> dlib Found: ${dlib_VERSION}")
+include_directories(${dlib_INCLUDE_DIRS})
+
+
 # 将FFmpeg的头文件路径添加到全局包含路径中
 include_directories(${FFMPEG_INCLUDE_DIRS})
 

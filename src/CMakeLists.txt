@@ -23,6 +23,7 @@ target_link_libraries(digital_human_core PUBLIC
     ${OpenCV_LIBS}
     ncnn
     ${FFMPEG_LIBRARIES}
+    dlib::dlib
 )
 
 message("OpenCV libraries: ${OpenCV_LIBS}")

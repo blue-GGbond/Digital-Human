@@ -33,3 +33,11 @@ if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/ffmpeg_audio_test.cpp")
     # 链接 SDK 核心库
     target_link_libraries(ffmpeg_audio_test PRIVATE digital_human_core)
 endif()
+
+# 5. 构建 dlib 测试程序 (验证人脸检测和关键点提取)
+if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/dlib_test.cpp")
+    add_executable(dlib_test dlib_test.cpp)
+
+    # 链接 SDK 核心库
+    target_link_libraries(dlib_test PRIVATE digital_human_core)
+endif()
