@@ -6,6 +6,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# 导出 compile_commands.json（供 clangd / VSCode IntelliSense 使用）
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # 默认开启优化
 add_compile_options(-O3)
 

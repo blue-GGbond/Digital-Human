@@ -41,3 +41,9 @@ if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/dlib_test.cpp")
     # 链接 SDK 核心库
     target_link_libraries(dlib_test PRIVATE digital_human_core)
 endif()
+
+# 6. ImageLoader Test 
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/image_loader_test.cpp")
+    add_executable(image_loader_test image_loader_test.cpp)
+    target_link_libraries(image_loader_test PRIVATE digital_human_core)
+endif()
