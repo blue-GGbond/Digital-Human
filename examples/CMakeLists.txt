@@ -61,3 +61,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/landmark_test.cpp")
 
     target_link_libraries(landmark_test PRIVATE digital_human_core)
 endif()
+
+# 9. face_aligner
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/face_aligner_test.cpp") 
+    add_executable(face_aligner_test face_aligner_test.cpp)
+
+    target_link_libraries(face_aligner_test PRIVATE digital_human_core)
+endif()
