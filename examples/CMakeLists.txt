@@ -47,3 +47,17 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/image_loader_test.cpp")
     add_executable(image_loader_test image_loader_test.cpp)
     target_link_libraries(image_loader_test PRIVATE digital_human_core)
 endif()
+
+# 7. FaceDetector
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/face_detector_test.cpp") 
+    add_executable(face_detector_test face_detector_test.cpp)
+
+    target_link_libraries(face_detector_test PRIVATE digital_human_core)
+endif()
+
+# 8. landmarks
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/landmark_test.cpp") 
+    add_executable(landmark_test landmark_test.cpp)
+
+    target_link_libraries(landmark_test PRIVATE digital_human_core)
+endif()
