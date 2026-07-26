@@ -68,3 +68,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/face_aligner_test.cpp")
 
     target_link_libraries(face_aligner_test PRIVATE digital_human_core)
 endif()
+
+# 10. mask_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/face_mask_test.cpp") 
+    add_executable(face_mask_test face_mask_test.cpp)
+
+    target_link_libraries(face_mask_test PRIVATE digital_human_core)
+endif()
