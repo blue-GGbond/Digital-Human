@@ -75,3 +75,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/face_mask_test.cpp")
 
     target_link_libraries(face_mask_test PRIVATE digital_human_core)
 endif()
+
+# 11. audio_loader_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_loader_test.cpp") 
+    add_executable(audio_loader_test audio_loader_test.cpp)
+
+    target_link_libraries(audio_loader_test PRIVATE digital_human_core)
+endif()
