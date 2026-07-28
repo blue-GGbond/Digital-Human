@@ -82,3 +82,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_loader_test.cpp")
 
     target_link_libraries(audio_loader_test PRIVATE digital_human_core)
 endif()
+
+# 12. audio_framer_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_framer_test.cpp") 
+    add_executable(audio_framer_test audio_framer_test.cpp)
+
+    target_link_libraries(audio_framer_test PRIVATE digital_human_core)
+endif()
