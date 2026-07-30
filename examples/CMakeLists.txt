@@ -89,3 +89,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_framer_test.cpp")
 
     target_link_libraries(audio_framer_test PRIVATE digital_human_core)
 endif()
+
+# 13. audio_mel_feature_extract_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_mel_feature_extract_test.cpp") 
+    add_executable(audio_mel_feature_extract_test audio_mel_feature_extract_test.cpp)
+
+    target_link_libraries(audio_mel_feature_extract_test PRIVATE digital_human_core)
+endif()
