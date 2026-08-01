@@ -103,3 +103,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_preprocess_test.cpp")
 
     target_link_libraries(audio_preprocess_test PRIVATE digital_human_core)
 endif()
+
+# 15. audio_buffer_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_buffer_test.cpp") 
+    add_executable(audio_buffer_test audio_buffer_test.cpp)
+
+    target_link_libraries(audio_buffer_test PRIVATE digital_human_core)
+endif()
