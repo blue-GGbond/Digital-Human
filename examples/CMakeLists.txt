@@ -96,3 +96,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_mel_feature_extract_test.cpp")
 
     target_link_libraries(audio_mel_feature_extract_test PRIVATE digital_human_core)
 endif()
+
+# 14. audio_preprocess_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_preprocess_test.cpp") 
+    add_executable(audio_preprocess_test audio_preprocess_test.cpp)
+
+    target_link_libraries(audio_preprocess_test PRIVATE digital_human_core)
+endif()
