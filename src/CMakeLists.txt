@@ -4,8 +4,8 @@ file(GLOB_RECURSE SRC_FILES
     "audio/*.cpp"
     "video/*.cpp"
     "core/*.cpp"
+    "model/*.cpp"
     "utils/*.cpp"
-    "models/*.cpp"
 )
 
 # 生成 SDK 库

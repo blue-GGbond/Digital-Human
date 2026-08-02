@@ -117,3 +117,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/wav2lip_test.cpp")
 
     target_link_libraries(wav2lip_test PRIVATE digital_human_core)
 endif()
+
+# 17. model_loader_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/model_loader_test.cpp") 
+    add_executable(model_loader_test model_loader_test.cpp)
+
+    target_link_libraries(model_loader_test PRIVATE digital_human_core)
+endif()
