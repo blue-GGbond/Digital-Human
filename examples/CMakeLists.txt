@@ -105,8 +105,15 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_preprocess_test.cpp")
 endif()
 
 # 15. audio_buffer_test
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_buffer_test.cpp") 
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_buffer_test.cpp")
     add_executable(audio_buffer_test audio_buffer_test.cpp)
 
     target_link_libraries(audio_buffer_test PRIVATE digital_human_core)
+endif()
+
+# 16. wav2lip_test (验证 ncnn 版 Wav2Lip 模型可用性)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/wav2lip_test.cpp")
+    add_executable(wav2lip_test wav2lip_test.cpp)
+
+    target_link_libraries(wav2lip_test PRIVATE digital_human_core)
 endif()
