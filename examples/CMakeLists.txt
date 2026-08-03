@@ -124,3 +124,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/model_loader_test.cpp")
 
     target_link_libraries(model_loader_test PRIVATE digital_human_core)
 endif()
+
+# 18. input_processor_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/input_processor_test.cpp") 
+    add_executable(input_processor_test input_processor_test.cpp)
+
+    target_link_libraries(input_processor_test PRIVATE digital_human_core)
+endif()
