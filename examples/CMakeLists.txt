@@ -138,3 +138,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/model_inference_test.cpp")
 
     target_link_libraries(model_inference_test PRIVATE digital_human_core)
 endif()
+
+# 20. output_processor_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/output_processor_test.cpp") 
+    add_executable(output_processor_test output_processor_test.cpp)
+
+    target_link_libraries(output_processor_test PRIVATE digital_human_core)
+endif()
