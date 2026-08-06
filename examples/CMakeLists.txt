@@ -145,3 +145,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/output_processor_test.cpp")
 
     target_link_libraries(output_processor_test PRIVATE digital_human_core)
 endif()
+
+# 21. timestamp_manger_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/timestamp_manger_test.cpp") 
+    add_executable(timestamp_manger_test timestamp_manger_test.cpp)
+
+    target_link_libraries(timestamp_manger_test PRIVATE digital_human_core)
+endif()
