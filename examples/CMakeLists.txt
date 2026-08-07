@@ -152,3 +152,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/timestamp_manger_test.cpp")
 
     target_link_libraries(timestamp_manger_test PRIVATE digital_human_core)
 endif()
+
+# 22. scheduler_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/scheduler_test.cpp") 
+    add_executable(scheduler_test scheduler_test.cpp)
+
+    target_link_libraries(scheduler_test PRIVATE digital_human_core)
+endif()
