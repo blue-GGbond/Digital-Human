@@ -67,6 +67,13 @@ find_package(dlib REQUIRED)
 message(STATUS ">> dlib Found: ${dlib_VERSION}")
 include_directories(${dlib_INCLUDE_DIRS})
 
+# 引入 pkg-config 工具
+find_package(PkgConfig REQUIRED)
+# 查找 portaudio-2.0
+pkg_check_modules(PORTAUDIO REQUIRED portaudio-2.0)
+
+# 告诉编译器去哪里找 <portaudio.h>
+include_directories(${PORTAUDIO_INCLUDE_DIRS})
 
 # 将FFmpeg的头文件路径添加到全局包含路径中
 include_directories(${FFMPEG_INCLUDE_DIRS})

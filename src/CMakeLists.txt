@@ -23,6 +23,7 @@ target_link_libraries(digital_human_core PUBLIC
     ${OpenCV_LIBS}
     ncnn
     ${FFMPEG_LIBRARIES}
+    ${PORTAUDIO_LIBRARIES}
     dlib::dlib
 )
 

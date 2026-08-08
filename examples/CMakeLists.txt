@@ -159,3 +159,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/scheduler_test.cpp")
 
     target_link_libraries(scheduler_test PRIVATE digital_human_core)
 endif()
+
+# 23. audio_video_Synchronous_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_video_Synchronous_test.cpp") 
+    add_executable(audio_video_Synchronous_test audio_video_Synchronous_test.cpp)
+
+    target_link_libraries(audio_video_Synchronous_test PRIVATE digital_human_core)
+endif()
