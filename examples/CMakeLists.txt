@@ -166,3 +166,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_video_Synchronous_test.cpp")
 
     target_link_libraries(audio_video_Synchronous_test PRIVATE digital_human_core)
 endif()
+
+# 24. audio_process_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_process_test.cpp") 
+    add_executable(audio_process_test audio_process_test.cpp)
+
+    target_link_libraries(audio_process_test PRIVATE digital_human_core)
+endif()
