@@ -55,14 +55,14 @@ public:
 
         if(timeout_ms < 0)
         {
-            success = !queue.empty();
+            success = !queue_.empty();
         }
         else if(timeout_ms == 0)
         {
             not_empty_cv_.wait(lock, [this](){
                 return !queue_.empty() || is_shutdown_;
             });
-            success = !queue.empty();
+            success = !queue_.empty();
         }
         else
         {
@@ -126,7 +126,7 @@ public:
 
     bool empty() const
     {
-        std::lock_guard<std::mutex> lock(mutex);
+        std::lock_guard<std::mutex> lock(mutex_);
         return queue_.empty();
     }
 
