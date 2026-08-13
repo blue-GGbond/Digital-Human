@@ -173,3 +173,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/audio_process_test.cpp")
 
     target_link_libraries(audio_process_test PRIVATE digital_human_core)
 endif()
+
+# 28. inference_process_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/inference_process_test.cpp") 
+    add_executable(inference_process_test inference_process_test.cpp)
+
+    target_link_libraries(inference_process_test PRIVATE digital_human_core)
+endif()
