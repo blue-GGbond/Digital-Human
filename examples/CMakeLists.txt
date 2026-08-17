@@ -180,3 +180,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/inference_process_test.cpp")
 
     target_link_libraries(inference_process_test PRIVATE digital_human_core)
 endif()
+
+# 29. render_process_test
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/render_process_test.cpp") 
+    add_executable(render_process_test render_process_test.cpp)
+
+    target_link_libraries(render_process_test PRIVATE digital_human_core)
+endif()
