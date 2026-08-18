@@ -28,3 +28,18 @@ target_link_libraries(digital_human_core PUBLIC
 )
 
 message("OpenCV libraries: ${OpenCV_LIBS}")
+
+# 主程序
+add_executable(digital_human_app main.cpp)
+
+# 将主程序链接到 SDK 库
+target_link_libraries(digital_human_app PRIVATE
+    digital_human_core
+)
+
+# 实时数字人的目标
+add_executable(digital_human_realtime_pulse_app main_realtime_pulse.cpp)
+
+target_link_libraries(digital_human_realtime_pulse_app PRIVATE
+    digital_human_core    
+)
